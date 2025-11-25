@@ -1,0 +1,25 @@
+flyer_id: sample_flyer
+retailer: demo_retailer
+paths:
+  input_path: data/sample_flyer.pdf
+  rendered_pages_dir: output/pages
+  crops_dir: output/crops
+yolo:
+  model_path: models/best.pt
+  confidence_threshold: 0.5
+  class_filter:
+    - offer_tile
+openai:
+  api_key: sk-xxxxx
+  model: gpt-5.1-mini
+  max_output_tokens: 1024
+typesense:
+  host: localhost
+  port: "8108"
+  protocol: http
+  api_key: dev-key
+  collection: offers
+  batch_size: 40
+max_dimension: 3000
+crop_image_format: png
+logging_level: INFO
